@@ -38,7 +38,7 @@ java -jar target/scala-cli-1.0.0-SNAPSHOT.jar --input=i --output=o
 ```
 
 ```
-00:00:00.000 [main] INFO com.ilyamur.scalacli.ExampleService - Application::run('i', 'o')
+00:00:00.000 [main] INFO com.ilyamur.scalacli.ExampleService - ExampleService::run('i', 'o')
 ```
 
 ## IT tests example
