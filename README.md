@@ -1,6 +1,6 @@
 # Scala CLI example
 
-Baseline CLI Java application, for enterprise
+Baseline CLI Scala 3 application
 
 - Scala 3
 - CLI - PicoCLI library with built-in help page
