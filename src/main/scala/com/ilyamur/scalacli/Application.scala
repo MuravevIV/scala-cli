@@ -1,14 +1,13 @@
 package com.ilyamur.scalacli
 
 import picocli.CommandLine
-import picocli.CommandLine.Option
-import picocli.CommandLine.Command
+import picocli.CommandLine.{Command, Option}
 
 object Application {
 
   def main(args: Array[String]): Unit = {
     val application = Application()
-    new CommandLine(application).execute(args:_*);
+    new CommandLine(application).execute(args: _*);
   }
 }
 
@@ -21,8 +20,9 @@ class Application extends Runnable {
   @Option(names = Array("-o", "--output"), required = true, description = Array("Output directory"))
   private var output: String = _
 
+  private val applicationModule = new ApplicationModule() {}
+
   override def run(): Unit = {
-    val application = ExampleService()
-    application.run(input, output)
+    applicationModule.applicationRunner.run(input, output)
   }
 }

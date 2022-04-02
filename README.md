@@ -2,14 +2,15 @@
 
 Baseline CLI Scala 3 application
 
-- Scala 3
-- CLI - PicoCLI library with built-in help page
-- Unit tests separation - regular and "IT" tests
+- Language - [Scala 3](https://docs.scala-lang.org) (as Maven dependency + plugin)
+- CLI - [PicoCLI](https://picocli.info)
+- DI Framework - [MacWire](https://github.com/softwaremill/macwire)
+- Unit tests with [Junit 5](https://junit.org/junit5/docs/current/user-guide/) and [Mocito](https://site.mockito.org/) - regular and "IT" tests
 
 ## Prerequisites
 
-- Java: openjdk version "11" (or similar)
-- Maven: Apache Maven 3.8.3 (or similar)
+- Java: [openjdk version "11"](https://adoptopenjdk.net/) (or similar)
+- Maven: [Apache Maven 3.8.3](https://maven.apache.org/) (or similar)
 
 ## Build
 
@@ -46,9 +47,9 @@ java -jar target/scala-cli-1.0.0-SNAPSHOT.jar --input=i --output=o
 __Note:__ Tests ending with "IT" (case-sensitive) are not executed during Maven's regular test phase.
 To run "IT" tests - specific profile (`it-tests`) should be active.
 
-See: [ExampleServiceIT](src/test/scala/com/ilyamur/scalacli/ExampleServiceIT.scala)
+See: [ApplicationRunnerIT](src/test/scala/com/ilyamur/scalacli/ApplicationRunnerIT.scala)
 
-### Running large tests
+### Running IT tests
 
 ```
 mvn test -P it-tests

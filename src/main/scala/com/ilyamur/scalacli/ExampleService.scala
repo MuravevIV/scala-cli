@@ -4,9 +4,9 @@ import org.slf4j.{Logger, LoggerFactory}
 
 class ExampleService {
 
-  val LOG: Logger = LoggerFactory.getLogger(getClass)
+  private val LOG: Logger = LoggerFactory.getLogger(getClass)
 
-  def run(input: String, output: String): Unit = {
+  def printParameters(input: String, output: String): Unit = {
     LOG.info(s"ExampleService::run('${input}', '${output}')")
   }
 }
