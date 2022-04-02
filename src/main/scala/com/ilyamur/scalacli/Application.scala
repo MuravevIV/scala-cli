@@ -20,9 +20,9 @@ class Application extends Runnable {
   @Option(names = Array("-o", "--output"), required = true, description = Array("Output directory"))
   private var output: String = _
 
-  private val applicationModule = new ApplicationModule() {}
+  object env extends ApplicationModule
 
   override def run(): Unit = {
-    applicationModule.applicationRunner.run(input, output)
+    env.applicationRunner.run(input, output)
   }
 }
